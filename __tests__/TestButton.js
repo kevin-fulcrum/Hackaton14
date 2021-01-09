@@ -8,26 +8,20 @@ configure({adapter: new Adapter()});
 
 const initialModalProps = {
     label: "name for button",
-    onPress: onPress(),
+    onPress: ()=>{'hola'},
     disabled: true
 };
 
-const wrapper = shallow(<Card {...initialModalProps} />);
+const wrapper = shallow(<Button {...initialModalProps} />);
 describe('Model Component', () => {
   it('should render', () => {
     expect(wrapper.exists()).toBe(true);
   });
   it('Text', () => {
-    expect(wrapper.find(Text)).toHaveLength(7,{});
+    expect(wrapper.find(Text)).toHaveLength(1);
   });
   
   it('should match props', () => {
     expect(wrapper.props.item).not.toBeNull();
-  });
-  it('simulates click events', () => {
-    const onButtonClick = sinon.spy();
-    const wrapper = shallow(<Foo onButtonClick={onButtonClick} />);
-    wrapper.find('button').simulate('click');
-    expect(onButtonClick).to.have.property('callCount', 1);
   });
 });
