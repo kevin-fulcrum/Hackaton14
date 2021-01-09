@@ -63,7 +63,7 @@ const Card =({item})=>{
         <>
         <View style={styles.container}>
             <View style={styles.textFecha}>
-            <Text style={{marginTop: 10, marginLeft: 30}}>{item.fecha_reg[8]+item.fecha_reg[9]+item.fecha_reg[7]+item.fecha_reg[5]+item.fecha_reg[6]+item.fecha_reg[4]+item.fecha_reg[0]+item.fecha_reg[1]+item.fecha_reg[2]+item.fecha_reg[3]}</Text>
+            <Text style={{marginTop: 10, marginLeft: 30}}>{item.fecha_reg}</Text>
             <Text style={styles.circleFecha}>     </Text>
             </View>
             <TouchableOpacity style={styles.datosDP} onPress={(e)=>console.warn('datos')}>
